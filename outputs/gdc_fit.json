@@ -1,0 +1,105 @@
+{
+  "assumption": "12 simulation steps approximately represent 365 days for calibration.",
+  "training_rows": 116,
+  "progression_rows": 1,
+  "progression_target_used": false,
+  "notes": [
+    "Progression calibration was skipped because too few GDC rows exposed usable progression_or_recurrence labels."
+  ],
+  "observed_one_year_mortality": 0.3879,
+  "simulated_terminal_rate": 0.3879,
+  "observed_progression_prevalence": 0.0,
+  "simulated_progression_prevalence": 0.8621,
+  "fitted_logistic_model": {
+    "intercept": -0.152,
+    "age_coef": 0.5963,
+    "grade4_coef": -0.152,
+    "male_coef": -0.2976
+  },
+  "simulation_config": {
+    "age_weight_scale": 1.5963,
+    "volume_weight_scale": 1.0,
+    "resection_weight_scale": 1.0,
+    "methylation_weight_scale": 1.0,
+    "grade_weight_scale": 0.848,
+    "progression_weight_scale": 2.0,
+    "intervention_weight_scale": 1.0,
+    "terminal_bias": -3.8
+  },
+  "event_names": [
+    "seizure",
+    "edema_flare",
+    "cognitive_drop",
+    "radiographic_progression",
+    "intervention"
+  ],
+  "cohort_summary_under_calibration": {
+    "patients": 116,
+    "average_event_counts": {
+      "seizure": 2,
+      "edema_flare": 3.103,
+      "cognitive_drop": 2.983,
+      "radiographic_progression": 3.931,
+      "intervention": 4.181
+    },
+    "final_state_distribution": {
+      "aggressive": 48,
+      "terminal": 45,
+      "angiogenic": 7,
+      "stable": 6,
+      "infiltrative": 10
+    },
+    "mean_instability_score": 19.15,
+    "transition_matrix": {
+      "stable": {
+        "stable": 0.6019900497512438,
+        "infiltrative": 0.17412935323383086,
+        "angiogenic": 0.13930348258706468,
+        "aggressive": 0.07462686567164178,
+        "terminal": 0.009950248756218905
+      },
+      "infiltrative": {
+        "stable": 0.008,
+        "infiltrative": 0.496,
+        "angiogenic": 0.232,
+        "aggressive": 0.256,
+        "terminal": 0.008
+      },
+      "angiogenic": {
+        "stable": 0.041666666666666664,
+        "infiltrative": 0.052083333333333336,
+        "angiogenic": 0.5,
+        "aggressive": 0.3958333333333333,
+        "terminal": 0.010416666666666666
+      },
+      "aggressive": {
+        "stable": 0.013059701492537313,
+        "infiltrative": 0.022388059701492536,
+        "angiogenic": 0.03917910447761194,
+        "aggressive": 0.7966417910447762,
+        "terminal": 0.1287313432835821
+      },
+      "terminal": {
+        "stable": 0.008097165991902834,
+        "infiltrative": 0.008097165991902834,
+        "angiogenic": 0.008097165991902834,
+        "aggressive": 0.0931174089068826,
+        "terminal": 0.8825910931174089
+      }
+    }
+  },
+  "project_comparison": {
+    "TCGA-GBM": {
+      "observed_mortality": 0.3879,
+      "simulated_terminal_rate": 0.3879,
+      "observed_progression_prevalence": 0.0,
+      "simulated_progression_prevalence": 0.8621
+    },
+    "TCGA-LGG": {
+      "observed_mortality": 0.0,
+      "simulated_terminal_rate": 0.0,
+      "observed_progression_prevalence": 0.0,
+      "simulated_progression_prevalence": 0.0
+    }
+  }
+}

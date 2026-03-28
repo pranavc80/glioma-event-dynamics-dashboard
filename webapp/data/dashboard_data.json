@@ -1,0 +1,376 @@
+{
+  "title": "Glioma Event Dynamics Dashboard",
+  "summary": {
+    "cases_fetched": 120,
+    "mean_age": 56.6,
+    "observed_one_year_mortality": 0.3879,
+    "simulated_terminal_rate": 0.3879,
+    "observed_progression_prevalence": 0.0,
+    "simulated_progression_prevalence": 0.9138
+  },
+  "age_buckets": [
+    {
+      "label": "<40",
+      "count": 14
+    },
+    {
+      "label": "40-49",
+      "count": 17
+    },
+    {
+      "label": "50-59",
+      "count": 31
+    },
+    {
+      "label": "60-69",
+      "count": 20
+    },
+    {
+      "label": "70+",
+      "count": 22
+    }
+  ],
+  "project_mix": [
+    {
+      "label": "TCGA-GBM",
+      "count": 120
+    },
+    {
+      "label": "TCGA-LGG",
+      "count": 0
+    }
+  ],
+  "fit_result": {
+    "assumption": "12 simulation steps approximately represent 365 days for calibration.",
+    "training_rows": 116,
+    "progression_rows": 1,
+    "progression_target_used": false,
+    "notes": [
+      "Progression calibration was skipped because too few GDC rows exposed usable progression_or_recurrence labels."
+    ],
+    "observed_one_year_mortality": 0.3879,
+    "simulated_terminal_rate": 0.3879,
+    "observed_progression_prevalence": 0.0,
+    "simulated_progression_prevalence": 0.9138,
+    "fitted_logistic_model": {
+      "intercept": -0.152,
+      "age_coef": 0.5963,
+      "grade4_coef": -0.152,
+      "male_coef": -0.2976
+    },
+    "simulation_config": {
+      "age_weight_scale": 1.5963,
+      "volume_weight_scale": 1.0,
+      "resection_weight_scale": 1.0,
+      "methylation_weight_scale": 1.0,
+      "grade_weight_scale": 0.848,
+      "progression_weight_scale": 2.0,
+      "intervention_weight_scale": 1.0,
+      "terminal_bias": -4.0
+    },
+    "event_names": [
+      "seizure",
+      "edema_flare",
+      "cognitive_drop",
+      "radiographic_progression",
+      "intervention"
+    ],
+    "cohort_summary_under_calibration": {
+      "patients": 116,
+      "average_event_counts": {
+        "seizure": 1.879,
+        "edema_flare": 3.302,
+        "cognitive_drop": 3.517,
+        "radiographic_progression": 4.595,
+        "intervention": 4.302
+      },
+      "final_state_distribution": {
+        "aggressive": 54,
+        "terminal": 45,
+        "infiltrative": 5,
+        "angiogenic": 8,
+        "stable": 4
+      },
+      "mean_instability_score": 20.92,
+      "transition_matrix": {
+        "stable": {
+          "stable": 0.5825688073394495,
+          "infiltrative": 0.1559633027522936,
+          "angiogenic": 0.13761467889908258,
+          "aggressive": 0.11926605504587157,
+          "terminal": 0.0045871559633027525
+        },
+        "infiltrative": {
+          "stable": 0.04411764705882353,
+          "infiltrative": 0.5294117647058824,
+          "angiogenic": 0.19117647058823528,
+          "aggressive": 0.22794117647058823,
+          "terminal": 0.007352941176470588
+        },
+        "angiogenic": {
+          "stable": 0.01694915254237288,
+          "infiltrative": 0.062146892655367235,
+          "angiogenic": 0.5141242937853108,
+          "aggressive": 0.3898305084745763,
+          "terminal": 0.01694915254237288
+        },
+        "aggressive": {
+          "stable": 0.017857142857142856,
+          "infiltrative": 0.011904761904761904,
+          "angiogenic": 0.04365079365079365,
+          "aggressive": 0.7996031746031746,
+          "terminal": 0.12698412698412698
+        },
+        "terminal": {
+          "stable": 0.0037593984962406013,
+          "infiltrative": 0.0037593984962406013,
+          "angiogenic": 0.0037593984962406013,
+          "aggressive": 0.07894736842105263,
+          "terminal": 0.9097744360902256
+        }
+      }
+    },
+    "project_comparison": {
+      "TCGA-GBM": {
+        "observed_mortality": 0.3879,
+        "simulated_terminal_rate": 0.3879,
+        "observed_progression_prevalence": 0.0,
+        "simulated_progression_prevalence": 0.9138
+      },
+      "TCGA-LGG": {
+        "observed_mortality": 0.0,
+        "simulated_terminal_rate": 0.0,
+        "observed_progression_prevalence": 0.0,
+        "simulated_progression_prevalence": 0.0
+      }
+    }
+  },
+  "longitudinal_fit": {
+    "rows": 432,
+    "patients": 24,
+    "state_counts": {
+      "stable": 88,
+      "infiltrative": 50,
+      "angiogenic": 66,
+      "aggressive": 47,
+      "terminal": 181
+    },
+    "state_prevalence_order": [
+      [
+        "terminal",
+        181
+      ],
+      [
+        "stable",
+        88
+      ],
+      [
+        "angiogenic",
+        66
+      ],
+      [
+        "infiltrative",
+        50
+      ],
+      [
+        "aggressive",
+        47
+      ]
+    ],
+    "transition_matrix": {
+      "stable": {
+        "stable": 0.6667,
+        "infiltrative": 0.1613,
+        "angiogenic": 0.129,
+        "aggressive": 0.0323,
+        "terminal": 0.0108
+      },
+      "infiltrative": {
+        "stable": 0.0577,
+        "infiltrative": 0.5962,
+        "angiogenic": 0.2115,
+        "aggressive": 0.0962,
+        "terminal": 0.0385
+      },
+      "angiogenic": {
+        "stable": 0.0714,
+        "infiltrative": 0.0571,
+        "angiogenic": 0.5714,
+        "aggressive": 0.2714,
+        "terminal": 0.0286
+      },
+      "aggressive": {
+        "stable": 0.04,
+        "infiltrative": 0.04,
+        "angiogenic": 0.12,
+        "aggressive": 0.44,
+        "terminal": 0.36
+      },
+      "terminal": {
+        "stable": 0.006,
+        "infiltrative": 0.006,
+        "angiogenic": 0.006,
+        "aggressive": 0.0119,
+        "terminal": 0.9702
+      }
+    },
+    "event_rate_matrix": {
+      "stable": {
+        "seizure": 0.1136,
+        "edema_flare": 0.0682,
+        "cognitive_drop": 0.0568,
+        "radiographic_progression": 0.0227,
+        "intervention": 0.0
+      },
+      "infiltrative": {
+        "seizure": 0.02,
+        "edema_flare": 0.1,
+        "cognitive_drop": 0.08,
+        "radiographic_progression": 0.14,
+        "intervention": 0.0
+      },
+      "angiogenic": {
+        "seizure": 0.0758,
+        "edema_flare": 0.0606,
+        "cognitive_drop": 0.0758,
+        "radiographic_progression": 0.0758,
+        "intervention": 0.1364
+      },
+      "aggressive": {
+        "seizure": 0.1064,
+        "edema_flare": 0.1702,
+        "cognitive_drop": 0.1702,
+        "radiographic_progression": 0.3191,
+        "intervention": 0.234
+      },
+      "terminal": {
+        "seizure": 0.0994,
+        "edema_flare": 0.221,
+        "cognitive_drop": 0.1989,
+        "radiographic_progression": 0.232,
+        "intervention": 0.4475
+      }
+    }
+  },
+  "policy_results": [
+    {
+      "policy": "conservative",
+      "patients": 25,
+      "mean_total_reward": -24.755,
+      "terminal_rate": 0.56,
+      "mean_episode_length": 30
+    },
+    {
+      "policy": "reactive",
+      "patients": 25,
+      "mean_total_reward": -24.235,
+      "terminal_rate": 0.8,
+      "mean_episode_length": 21.8
+    },
+    {
+      "policy": "none",
+      "patients": 25,
+      "mean_total_reward": -17.003,
+      "terminal_rate": 1.0,
+      "mean_episode_length": 11.88
+    }
+  ],
+  "sample_rows": [
+    {
+      "submitter_id": "TCGA-12-0819",
+      "project_id": "TCGA-GBM",
+      "age_years": 49.72,
+      "vital_status": "Dead",
+      "days_to_death": 754,
+      "progression_or_recurrence": null
+    },
+    {
+      "submitter_id": "TCGA-06-0208",
+      "project_id": "TCGA-GBM",
+      "age_years": 52.31,
+      "vital_status": "Dead",
+      "days_to_death": 256,
+      "progression_or_recurrence": null
+    },
+    {
+      "submitter_id": "TCGA-12-1601",
+      "project_id": "TCGA-GBM",
+      "age_years": null,
+      "vital_status": "Not Reported",
+      "days_to_death": null,
+      "progression_or_recurrence": "not reported"
+    },
+    {
+      "submitter_id": "TCGA-06-0131",
+      "project_id": "TCGA-GBM",
+      "age_years": null,
+      "vital_status": "Not Reported",
+      "days_to_death": null,
+      "progression_or_recurrence": "not reported"
+    },
+    {
+      "submitter_id": "TCGA-02-0099",
+      "project_id": "TCGA-GBM",
+      "age_years": 46.76,
+      "vital_status": "Dead",
+      "days_to_death": 106,
+      "progression_or_recurrence": null
+    },
+    {
+      "submitter_id": "TCGA-02-2470",
+      "project_id": "TCGA-GBM",
+      "age_years": 57.55,
+      "vital_status": "Dead",
+      "days_to_death": 393,
+      "progression_or_recurrence": null
+    },
+    {
+      "submitter_id": "TCGA-02-0024",
+      "project_id": "TCGA-GBM",
+      "age_years": 35.91,
+      "vital_status": "Dead",
+      "days_to_death": 1615,
+      "progression_or_recurrence": null
+    },
+    {
+      "submitter_id": "TCGA-06-0154",
+      "project_id": "TCGA-GBM",
+      "age_years": 54.81,
+      "vital_status": "Dead",
+      "days_to_death": 424,
+      "progression_or_recurrence": null
+    },
+    {
+      "submitter_id": "TCGA-27-1838",
+      "project_id": "TCGA-GBM",
+      "age_years": 59.43,
+      "vital_status": "Dead",
+      "days_to_death": 350,
+      "progression_or_recurrence": null
+    },
+    {
+      "submitter_id": "TCGA-06-0210",
+      "project_id": "TCGA-GBM",
+      "age_years": 72.83,
+      "vital_status": "Dead",
+      "days_to_death": 225,
+      "progression_or_recurrence": null
+    },
+    {
+      "submitter_id": "TCGA-06-0128",
+      "project_id": "TCGA-GBM",
+      "age_years": 66.3,
+      "vital_status": "Dead",
+      "days_to_death": 691,
+      "progression_or_recurrence": null
+    },
+    {
+      "submitter_id": "TCGA-06-0133",
+      "project_id": "TCGA-GBM",
+      "age_years": 64.07,
+      "vital_status": "Dead",
+      "days_to_death": 435,
+      "progression_or_recurrence": null
+    }
+  ]
+}

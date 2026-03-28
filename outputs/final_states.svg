@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320">
+<rect width="100%" height="100%" fill="#f7f4ec"/>
+<text x="36" y="42" font-size="28" font-family="Georgia, serif" fill="#1f2937">
+Final State Distribution</text>
+<text x="40" y="132" font-size="16" font-family="Courier New" fill="#1f2937">stable</text>
+<rect x="110" y="110" width="620" height="34" rx="8" fill="#e5e7eb"/>
+<rect x="110" y="110" width="0.00" height="34" rx="8" fill="#166534"/>
+<text x="745" y="132" font-size="15" font-family="Courier New" fill="#111827">0</text>
+<text x="40" y="174" font-size="16" font-family="Courier New" fill="#1f2937">infiltrative</text>
+<rect x="110" y="152" width="620" height="34" rx="8" fill="#e5e7eb"/>
+<rect x="110" y="152" width="120.00" height="34" rx="8" fill="#0f766e"/>
+<text x="745" y="174" font-size="15" font-family="Courier New" fill="#111827">2</text>
+<text x="40" y="216" font-size="16" font-family="Courier New" fill="#1f2937">angiogenic</text>
+<rect x="110" y="194" width="620" height="34" rx="8" fill="#e5e7eb"/>
+<rect x="110" y="194" width="0.00" height="34" rx="8" fill="#0284c7"/>
+<text x="745" y="216" font-size="15" font-family="Courier New" fill="#111827">0</text>
+<text x="40" y="258" font-size="16" font-family="Courier New" fill="#1f2937">aggressive</text>
+<rect x="110" y="236" width="620" height="34" rx="8" fill="#e5e7eb"/>
+<rect x="110" y="236" width="0.00" height="34" rx="8" fill="#ea580c"/>
+<text x="745" y="258" font-size="15" font-family="Courier New" fill="#111827">0</text>
+<text x="40" y="300" font-size="16" font-family="Courier New" fill="#1f2937">terminal</text>
+<rect x="110" y="278" width="620" height="34" rx="8" fill="#e5e7eb"/>
+<rect x="110" y="278" width="480.00" height="34" rx="8" fill="#b91c1c"/>
+<text x="745" y="300" font-size="15" font-family="Courier New" fill="#111827">8</text>
+</svg>

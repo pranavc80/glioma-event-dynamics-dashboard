@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glioma Event Dynamics Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Neuro-Oncology Research Sandbox</p>
+          <h1>Glioma Event Dynamics Dashboard</h1>
+          <p class="lede">
+            Explore public TCGA glioma case summaries, run live counterfactual simulations,
+            upload longitudinal CSVs, and inspect fitted transition structure directly in the browser.
+          </p>
+        </div>
+        <div class="hero-panel">
+          <p class="hero-label">Interactive Modes</p>
+          <p class="hero-value">Live patient simulation, counterfactual comparison, clickable charts, CSV upload</p>
+          <p class="hero-label">Data Artifact</p>
+          <p class="hero-value mono">webapp/data/dashboard_data.json</p>
+        </div>
+      </header>
+
+      <main id="app">
+        <section class="status-card">
+          <p>Loading dashboard data...</p>
+        </section>
+      </main>
+    </div>
+
+    <template id="metric-card-template">
+      <article class="metric-card">
+        <p class="metric-label"></p>
+        <p class="metric-value"></p>
+      </article>
+    </template>
+
+    <div id="chart-tooltip" class="chart-tooltip hidden"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>

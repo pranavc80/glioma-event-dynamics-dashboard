@@ -1,0 +1,107 @@
+{
+  "rows": 432,
+  "patients": 24,
+  "state_counts": {
+    "stable": 88,
+    "infiltrative": 50,
+    "angiogenic": 66,
+    "aggressive": 47,
+    "terminal": 181
+  },
+  "state_prevalence_order": [
+    [
+      "terminal",
+      181
+    ],
+    [
+      "stable",
+      88
+    ],
+    [
+      "angiogenic",
+      66
+    ],
+    [
+      "infiltrative",
+      50
+    ],
+    [
+      "aggressive",
+      47
+    ]
+  ],
+  "transition_matrix": {
+    "stable": {
+      "stable": 0.6667,
+      "infiltrative": 0.1613,
+      "angiogenic": 0.129,
+      "aggressive": 0.0323,
+      "terminal": 0.0108
+    },
+    "infiltrative": {
+      "stable": 0.0577,
+      "infiltrative": 0.5962,
+      "angiogenic": 0.2115,
+      "aggressive": 0.0962,
+      "terminal": 0.0385
+    },
+    "angiogenic": {
+      "stable": 0.0714,
+      "infiltrative": 0.0571,
+      "angiogenic": 0.5714,
+      "aggressive": 0.2714,
+      "terminal": 0.0286
+    },
+    "aggressive": {
+      "stable": 0.04,
+      "infiltrative": 0.04,
+      "angiogenic": 0.12,
+      "aggressive": 0.44,
+      "terminal": 0.36
+    },
+    "terminal": {
+      "stable": 0.006,
+      "infiltrative": 0.006,
+      "angiogenic": 0.006,
+      "aggressive": 0.0119,
+      "terminal": 0.9702
+    }
+  },
+  "event_rate_matrix": {
+    "stable": {
+      "seizure": 0.1136,
+      "edema_flare": 0.0682,
+      "cognitive_drop": 0.0568,
+      "radiographic_progression": 0.0227,
+      "intervention": 0.0
+    },
+    "infiltrative": {
+      "seizure": 0.02,
+      "edema_flare": 0.1,
+      "cognitive_drop": 0.08,
+      "radiographic_progression": 0.14,
+      "intervention": 0.0
+    },
+    "angiogenic": {
+      "seizure": 0.0758,
+      "edema_flare": 0.0606,
+      "cognitive_drop": 0.0758,
+      "radiographic_progression": 0.0758,
+      "intervention": 0.1364
+    },
+    "aggressive": {
+      "seizure": 0.1064,
+      "edema_flare": 0.1702,
+      "cognitive_drop": 0.1702,
+      "radiographic_progression": 0.3191,
+      "intervention": 0.234
+    },
+    "terminal": {
+      "seizure": 0.0994,
+      "edema_flare": 0.221,
+      "cognitive_drop": 0.1989,
+      "radiographic_progression": 0.232,
+      "intervention": 0.4475
+    }
+  }
+}
