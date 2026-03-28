@@ -2,6 +2,12 @@
 
 `Glioma Event Dynamics Lab` is a neuroscience-inspired ML project that models brain-tumor progression as an evolving event system instead of a one-shot prediction problem.
 
+Live website:
+[https://glioma-event-dynamics-dashboard.vercel.app/webapp](https://glioma-event-dynamics-dashboard.vercel.app/webapp)
+
+GitHub:
+[https://github.com/pranavc80/glioma-event-dynamics-dashboard](https://github.com/pranavc80/glioma-event-dynamics-dashboard)
+
 It now includes three connected layers:
 
 - a latent-state + self-exciting event simulator,

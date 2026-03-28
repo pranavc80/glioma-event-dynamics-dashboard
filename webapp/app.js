@@ -390,6 +390,17 @@ function renderDashboard(data, state) {
   const app = document.getElementById("app");
   app.innerHTML = "";
 
+  const aboutPanel = createPanel("About", "Project Overview");
+  const aboutCallout = document.createElement("div");
+  aboutCallout.className = "callout";
+  aboutCallout.innerHTML = `
+    <p><strong>What this is:</strong> a neuro-oncology modeling lab that combines public TCGA glioma metadata, temporal disease-state simulation, intervention comparison, and longitudinal-fit summaries.</p>
+    <p><strong>Live site:</strong> <a href="https://glioma-event-dynamics-dashboard.vercel.app/webapp" target="_blank" rel="noreferrer">glioma-event-dynamics-dashboard.vercel.app/webapp</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/pranavc80/glioma-event-dynamics-dashboard" target="_blank" rel="noreferrer">github.com/pranavc80/glioma-event-dynamics-dashboard</a></p>
+  `;
+  aboutPanel.appendChild(aboutCallout);
+  app.appendChild(aboutPanel);
+
   const metrics = document.createElement("section");
   metrics.className = "metrics-grid";
   metrics.append(
